@@ -4,7 +4,14 @@
     <title>My Django Site</title>
   </head>
   <body>
-    <h1>Welcome to Django Internship Portal</h1>
+    <h2>Welcome to Django Internship Portal</h2>
+    <h1>All Posts</h1>
+    {% for post in posts %}
+    <h2>{{ post.title }}</h2>
+    <p>{{ post.content }}</p>
+    <p>{{ post.created_at}}</p>
+    {% endfor %}
+
     <p>This page is served using a Django template.</p>
   </body>
 </html>
